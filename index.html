@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arthimetic Calculator</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    
+    
+    
+</head>
+<body>
+    
+   
+<div class="container">
+
+    <div class="row text-center">
+        <div class="col-xs-3" id="equalsto">
+            <button type="button" id="resetbtn" class="btn" onclick="clear_panel()"><h1>Clear</h1></button>
+        </div>
+        <div class="col-xs-3" id="equalsto">
+            <button type="button" id="equalstobtn" class="btn" onclick="equals_s()"><h1>=</h1></button>
+        </div>
+        <div class="col-xs-6 ans" id="Answer">
+            <h1 id="answerpanel">Answer</h1>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-3" id="num1">
+        <button type="button" id="num1btn" class="btn" onclick="add_s('1')"><h1>1</h1></button>
+        </div>
+        <div class="col-xs-3" id="num2">
+        <button type="button" id="num2btn" class="btn" onclick="add_s('2')"><h1>2</h1></button>
+        </div>
+        <div class="col-xs-3" id="num3">
+        <button type="button" id="num3btn" class="btn" onclick="add_s('3')"><h1>3</h1></button>
+        </div>
+        <div class="col-xs-3" id="op1">
+        <button type="button" id="op1btn" class="btn" onclick="add_s('+')"><h1>+</h1></button>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-3" id="num4">
+        <button type="button" id="num4btn" class="btn" onclick="add_s('4')"><h1>4</h1></button>
+        </div>
+        <div class="col-xs-3" id="num5">
+        <button type="button" id="num5btn" class="btn" onclick="add_s('5')"><h1>5</h1></button>
+        </div>
+        <div class="col-xs-3" id="num6">
+        <button type="button" id="num6btn" class="btn" onclick="add_s('6')"><h1>6</h1></button>
+        </div>
+        <div class="col-xs-3" id="op2">
+        <button type="button" id="op2btn" class="btn" onclick="add_s('-')"><h1>-</h1></button>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-3" id="num7">
+        <button type="button" id="num7btn" class="btn" onclick="add_s('7')"><h1>7</h1></button>
+        </div>
+        <div class="col-xs-3" id="num8">
+        <button type="button" id="num8btn" class="btn" onclick="add_s('8')"><h1>8</h1></button>
+        </div>
+        <div class="col-xs-3" id="num9">
+        <button type="button" id="num9btn" class="btn" onclick="add_s('9')"><h1>9</h1></button>
+        </div>
+        <div class="col-xs-3" id="op3">
+        <button type="button" id="op3btn" class="btn" onclick="add_s('*')"><h1>*</h1></button>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-3" id="dot">
+        <button type="button" id="fotbtn" class="btn" onclick="add_s('.')"><h1>.</h1></button>
+        </div>
+        <div class="col-xs-3" id="num0">
+        <button type="button" id="num0btn" class="btn" onclick="add_s('0')"><h1>0</h1></button>
+        </div>
+        <div class="col-xs-3" id="op4">
+        <button type="button" id="op4btn" class="btn" onclick="add_s('%')"><h1>%</h1></button>
+        </div>
+        <div class="col-xs-3" id="op5">
+        <button type="button" id="op5btn" class="btn" onclick="add_s('/')"><h1>/</h1></button>
+        </div>
+    </div>
+        
+</div>
+    
+<script>
+
+    var string_s=" ";
+    function add_s(p){
+       // document.write("s");
+        string_s = string_s + p;
+       // document.write("a");
+        show_s();
+    }
+    
+    function show_s() {
+    document.getElementById("answerpanel").innerHTML = ""+string_s;
+}
+    function clear_panel() {
+    document.getElementById("answerpanel").innerHTML = "Answer";
+    string_s=" ";
+}
+    
+    function equals_s(){
+        try{
+            var result_s=eval(string_s);
+            document.getElementById("answerpanel").innerHTML = result_s;
+        }catch(err)
+            {
+                document.write("Error");
+            }
+        
+        }
+    
+</script>
+    
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/parallax.js"></script>
+
+</body>
+</html>

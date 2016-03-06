@@ -1,0 +1,33 @@
+.container{
+    padding-top:40px;
+    
+}
+.row{
+    padding:0px;
+    margin:0px;
+}
+.well{
+    padding:0px;
+    margin:0px;
+}
+.btn{
+    width:100%;
+    padding:2px 0px;
+}
+.col-xs-3{
+    padding:2px 2px;
+
+}
+.col-xs-6{
+    background: #bdbdbd;
+    margin-top: 2px;
+    padding-bottom: 4px;
+    border: 1px solid black;
+ 
+}
+.col-xs-3 :hover{
+    background:#bdbdbd;
+}
+.body{
+    background-color:#a0a0a0;
+}
